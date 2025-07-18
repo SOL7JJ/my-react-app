@@ -1,0 +1,11 @@
+.food-section {
+  padding: 1rem;
+  text-align: center;
+}
+.food-section ul {
+  list-style: none;
+  padding: 0;
+}
+.food-section li {
+  margin: 0.5rem 0;
+}

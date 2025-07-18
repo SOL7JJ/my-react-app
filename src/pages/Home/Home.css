@@ -1,0 +1,196 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  background: url('../../assets/cross.png') no-repeat center center / cover;
+  opacity: 0.05;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* <-- Added so clicks pass through */
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 3s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 3s ease-in-out;
+}
+
+.hero-button {
+  background-color: #4338ca;
+  color: #ffffff;
+  border: none;
+  padding: 14px 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block; /* make <a> behave like a button */
+}
+
+.hero-button:hover {
+  background-color: #e0e7ff;
+  color: #4338ca; /* Change text color to dark blue on hover */
+  transform: translateY(-2px);
+}
+
+
+/* Church Image Section */
+.church-image-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
+}
+
+.church-image {
+  width: 95%;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.6s ease;
+}
+
+.church-image:hover {
+  transform: scale(1.02);
+}
+
+.church-caption {
+  font-size: 1rem;
+  margin-top: 15px;
+  color: #555;
+}
+
+/* Services Section */
+.services {
+  padding: 60px 20px;
+  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #1d4ed8;
+  margin-bottom: 20px;
+}
+
+.service-time,
+.service-location {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #444;
+}
+
+/* Watch Online Section */
+.watch-online {
+  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.watch-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.watch-button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.watch-button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle,
+  .service-time,
+  .service-location,
+  .watch-description {
+    font-size: 1rem;
+  }
+
+  .hero-button,
+  .watch-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .church-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+}

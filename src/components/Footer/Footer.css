@@ -1,0 +1,21 @@
+.footer {
+  background-color: #7c3aed; /* match navbar warm purple */
+  color: #f8f7ff; /* off-white text for consistency */
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.02em;
+}
+
+.footer a {
+  color: #c4b5fd; /* light lavender links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #e0d4fd; /* lighter lavender on hover */
+  text-decoration: underline;
+}

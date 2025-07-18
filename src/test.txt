@@ -1,0 +1,531 @@
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
+import Food from "./Food.jsx";
+import Card from "./card.jsx";
+function App() {
+  return (
+     <div className="app-container">
+    <>
+      <Header />
+      <Food />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Footer />
+    </>
+</div>
+  );
+}
+
+export default App;
+
+
+
+
+
+import profilePic from "./assets/product.jpg";
+
+function Card() {
+  return (
+    <div className="card">
+      <img src={profilePic} alt="profile picture" className="card-image"/>
+      <h2>Product</h2>
+      <p>This is a description of the product.</p>
+    </div>
+  );
+}
+
+export default Card; 
+
+
+
+
+function Food() {
+  const food1 = "ITEMS";
+  const food2 = "BRANDS";
+
+  return (
+    <div>
+      <h2>E-STORE</h2>
+      <ul>
+        <li>STORE</li>
+        <li>{food1}</li>
+        <li>{food2}</li>
+      </ul>
+    </div>
+  );
+}
+
+export default Food;
+
+
+
+
+function Footer() {
+  return (
+    <footer>
+      <p>&copy; 2025 James Dev</p>
+    </footer>
+  );
+}
+
+export default Footer;
+
+
+
+import { useState } from "react";
+
+function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header className="navbar">
+      <div className="navbar-container">
+        <h1 className="logo">My App</h1>
+
+        <button
+          className="hamburger"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className="bar" />
+          <span className="bar" />
+          <span className="bar" />
+        </button>
+
+        <nav className={`nav-menu ${isOpen ? "open" : ""}`}>
+          <ul className="nav-links">
+            <li><a href="/home" onClick={() => setIsOpen(false)}>Home</a></li>
+            <li><a href="/about" onClick={() => setIsOpen(false)}>About</a></li>
+            <li><a href="/services" onClick={() => setIsOpen(false)}>Services</a></li>
+            <li><a href="/blog" onClick={() => setIsOpen(false)}>Blog</a></li>
+            <li><a href="/contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+export default Header;
+
+
+
+
+
+/* GLOBAL RESET & BASE STYLES */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* BUTTON STYLES */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* LIGHT MODE SUPPORT */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* APP CONTAINER */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical alignment */
+  align-items: center;      /* horizontal alignment */
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  border: 1px solid hsl(0, 4%, 54%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); /* fixed invalid hsl syntax */
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 900px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 120px;             
+  height: 120px;
+  object-fit: cover;        
+  border-radius: 50%;       
+  margin-bottom: 10px;
+  border: 3px solid #646cff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: rgba(18, 145, 208, 0.35); /* replaced hex with rgba for clarity */
+  padding: 15px 30px;
+  color: #020202; /* very dark text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;  /* space between flex items */
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-right: 40px; /* push nav away from logo */
+}
+
+/* ==== HAMBURGER ==== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #070707;
+  border-radius: 2px;
+}
+
+/* ==== NAVIGATION MENU ==== */
+.nav-menu {
+  display: flex;
+  margin-left: 40px; /* space between logo and nav */
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #070707;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #646cff;
+  border-bottom: 2px solid #646cff;
+}
+
+/* ==== RESPONSIVE (MOBILE) ==== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* hidden by default on mobile */
+    padding: 15px 0;
+    margin-left: 0; /* reset margin */
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Optional: adjust text color for dark mobile menu */
+  .nav-links li a {
+    color: #f0f0f0;
+  }
+  
+  .nav-links li a:hover {
+    color: #646cff;
+    border-bottom: none; /* remove border on mobile hover */
+  }
+}
+
+
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+
+
+
+STRUCTURE 
+
+/src
+│
+├── /components
+│   ├── Header.jsx
+│   ├── Header.css         ← CSS file for Header component
+│   ├── Footer.jsx
+│   ├── Footer.css         ← CSS file for Footer component
+│   ├── ProductCard.jsx
+│   ├── ProductCard.css    ← CSS file for ProductCard component
+│   ├── SearchBar.jsx
+│   ├── SearchBar.css
+│   ├── CategoryMenu.jsx
+│   ├── CategoryMenu.css
+│   ├── RatingStars.jsx
+│   ├── RatingStars.css
+│   └── Button.jsx
+│       └── Button.css
+│
+├── /features
+│   ├── /cart
+│   │   ├── CartIcon.jsx
+│   │   ├── CartIcon.css
+│   │   ├── CartItem.jsx
+│   │   ├── CartItem.css
+│   │   └── cartSlice.js
+│   ├── /auth
+│   │   ├── LoginForm.jsx
+│   │   ├── LoginForm.css
+│   │   ├── RegisterForm.jsx
+│   │   ├── RegisterForm.css
+│   │   └── authSlice.js
+│   └── /products
+│       ├── ProductList.jsx
+│       ├── ProductList.css
+│       └── productSlice.js
+│
+├── /pages
+│   ├── Home.jsx
+│   ├── Home.css
+│   ├── ProductDetail.jsx
+│   ├── ProductDetail.css
+│   ├── Cart.jsx
+│   ├── Cart.css
+│   ├── Checkout.jsx
+│   ├── Checkout.css
+│   ├── Login.jsx
+│   ├── Login.css
+│   ├── Register.jsx
+│   ├── Register.css
+│   ├── Profile.jsx
+│   └── Profile.css
+│
+├── /styles
+│   ├── index.css          ← Global CSS, resets, variables
+│   └── variables.css
+│
+└── ... (other folders/files)
+
+
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+
+
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Register from './pages/Register/Register.jsx';
+import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Food from "./components/Food/Food.jsx";
+import Card from "./components/Card/Card.jsx";
+
+function App() {
+  const location = useLocation();
+
+  // List of paths where we want to HIDE the layout
+  const noLayoutRoutes = ['/register'];
+  const isLayoutHidden = noLayoutRoutes.includes(location.pathname);
+
+  return (
+    <div className="app-container">
+      {!isLayoutHidden && <Header />}
+
+      <Routes>
+        {/* All your routes */}
+        <Route path="/register" element={<Register />} />
+      </Routes>
+
+      {!isLayoutHidden && (
+        <>
+          <Food />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Footer />
+        </>
+      )}
+    </div>
+  );
+}
+
+export default App;
+
+
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Register from './pages/Register/Register.jsx';
+import Login from './pages/Login/Login.jsx';
+import Blog from './pages/Blog/Blog.jsx';
+import About from './pages/About/About.jsx';
+import Contact from './pages/Contact/Contact.jsx';
+import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Food from "./components/Food/Food.jsx";
+import Card from "./components/Card/Card.jsx";
+
+function App() {
+  const location = useLocation();
+
+  // List of paths where we want to HIDE the layout
+  const noLayoutRoutes = ['/register'];
+  const isLayoutHidden = noLayoutRoutes.includes(location.pathname);
+
+  return (
+    <div className="app-container">
+      {!isLayoutHidden && <Header />}
+
+      <Routes>
+        {/* All your routes */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/blog" element={<Blog />} />
+         <Route path="/about" element={<About />} /> 
+         <Route path="/contact" element={<Contact />} />
+
+      </Routes>
+
+      {!isLayoutHidden && (
+        <>
+          <Food />
+          <Card />
+          <Card />
+          <Footer />
+        </>
+      )}
+    </div>
+  );
+}
+
+export default App;
+
+
+
+linear-gradient(135deg, #3b82f6, #4f46e5)
