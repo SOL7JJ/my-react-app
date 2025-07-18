@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './login.css'; // Make sure you create this CSS file
+import './Login.css'; // Make sure you create this CSS file
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
