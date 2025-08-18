@@ -1,19 +1,19 @@
 {
-  "homepage": "https://sojj7.github.io/my-react-app",
+  "homepage": "https://SOL7JJ.github.io/my-react-app",
   "name": "my-react-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-     "start": "react-scripts start",
+    "start": "react-scripts start",
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-     "test": "react-scripts test",
+    "test": "react-scripts test",
     "preview": "vite preview",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -33,5 +33,3 @@
     "vite": "^7.0.4"
   }
 }
-
-

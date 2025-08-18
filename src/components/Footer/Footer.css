@@ -10,12 +10,12 @@
 }
 
 .footer a {
-  color: #c4b5fd; /* light lavender links */
-  text-decoration: none;
+  color: #f8f7ff; /* light lavender links */
+  text-decoration: #f8f7ff;
   transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: #e0d4fd; /* lighter lavender on hover */
+  color: #f8f7ff; /* lighter lavender on hover */
   text-decoration: underline;
 }

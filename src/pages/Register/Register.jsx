@@ -43,6 +43,7 @@ export default function Register() {
           required
         />
         <button type="submit">Register</button>
+        <p>Come to me those who are weary </p>
       </form>
     </div>
   );

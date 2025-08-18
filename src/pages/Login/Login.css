@@ -10,13 +10,13 @@ body {
 
 /* Login Container Styling */
 .login-container {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom right, #ffffff, #e2d4f5, #a78bfa);
-  padding: 20px;
+  padding: 40px;
 }
 
 /* Login Heading */

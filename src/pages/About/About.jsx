@@ -1,5 +1,5 @@
 import React from 'react';
-import './about.css';
+import './About.css';
 import pastorImage from '../../assets/pastor.jpeg';  // Adjust path based on your project structure
 
 export default function About() {
@@ -9,7 +9,7 @@ export default function About() {
         <div className="about-text">
           <h2 className="about-title">About Us</h2>
           <p className="about-paragraph">
-            CORIM Ministries is a vibrant community of believers rooted in the love of Christ.
+             CORIM Ministries is a vibrant community of believers rooted in the love of Christ.
             We are committed to spreading the gospel, serving our neighbours, and growing together in faith.
             Our mission is to glorify God, love one another, and reach the world with the message of hope and salvation.
           </p>

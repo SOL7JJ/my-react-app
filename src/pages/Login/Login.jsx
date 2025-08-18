@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css'; // Make sure you create this CSS file
+import './Login.css'; // Make sure this file exists
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -36,6 +36,8 @@ export default function Login() {
         />
         <button type="submit">Login</button>
       </form>
+      <p>Not a member yet? <a href="/register">Register</a></p>
     </div>
   );
 }
+ 

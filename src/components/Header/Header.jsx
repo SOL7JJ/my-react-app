@@ -1,13 +1,19 @@
 import { useState } from "react";
 import "./Header.css";
 import { Link } from 'react-router-dom';
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="navbar">
       <div className="navbar-container">
-        <h1 className="logo">CORIM</h1>
+        <div className="logo-section">
+          <h1 className="logo">CORIM</h1>
+          <p className="tagline">City of Refuge International Ministries</p>
+        </div>
+
+        {/* Hamburger menu */}
         <button
           className="hamburger"
           onClick={() => setIsOpen(!isOpen)}
@@ -17,14 +23,24 @@ function Header() {
           <span className="bar" />
           <span className="bar" />
         </button>
-        <nav className={`nav-menu ${isOpen ? "open" : ""}`}>
+
+        {/* Centered nav links */}
+        <nav className={`nav-center ${isOpen ? "open" : ""}`}>
           <ul className="nav-links">
-            <li><a href="/home" onClick={() => setIsOpen(false)}>Home</a></li>
-            <li><a href="/about" onClick={() => setIsOpen(false)}>About</a></li>
-            <li><a href="/blog" onClick={() => setIsOpen(false)}>Blog</a></li>
-            <li><a href="/contact" onClick={() => setIsOpen(false)}>Contact</a></li>
-             <li><a href="/Login" onClick={() => setIsOpen(false)}>Login</a></li>
-            <li><a href="/Register" onClick={() => setIsOpen(false)}>Register</a></li>
+            <li><Link to="/home" onClick={() => setIsOpen(false)}>HOME</Link></li>
+            <li><Link to="/about" onClick={() => setIsOpen(false)}>ABOUT</Link></li>
+            <li><Link to="/blog" onClick={() => setIsOpen(false)}>BLOG</Link></li>
+            <li><Link to="/donation" onClick={() => setIsOpen(false)}>DONATION</Link></li>
+            <li><Link to="/testimonies" onClick={() => setIsOpen(false)}>TESTIMONIES</Link></li>
+            <li><Link to="/contact" onClick={() => setIsOpen(false)}>CONTACT</Link></li>
+          </ul>
+        </nav>
+
+        {/* Right side nav links */}
+        <nav className={`nav-right ${isOpen ? "open" : ""}`}>
+          <ul className="nav-links">
+            <li><Link to="/login" onClick={() => setIsOpen(false)}>LOGIN</Link></li>
+            <li><Link to="/register" onClick={() => setIsOpen(false)}>REGISTER</Link></li>
           </ul>
         </nav>
       </div>
@@ -33,4 +49,3 @@ function Header() {
 }
 
 export default Header;
-
