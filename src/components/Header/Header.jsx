@@ -11,7 +11,7 @@ function Header() {
       <div className="navbar-container">
         {/* Logo Section */}
         <div className="logo-section">
-          <img src={logo} alt="Logo" className="logo-image" />
+          <img src={logo} alt="logo" className="logo-image" />
           <div className="logo-container">
             <h2 className="logo">CITY OF REFUGE</h2>
             <p className="tagline">INTERNATIONAL MINISTRIES</p>
