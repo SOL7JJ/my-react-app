@@ -33,7 +33,7 @@ html {
 
 .hero::after {
   content: "";
-  background: url('../../assets/cross.png') no-repeat center center / cover;
+  background: none;
   opacity: 0.05;
   position: absolute;
   top: 0;
