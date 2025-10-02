@@ -20,6 +20,8 @@ export default function Donation() {
           <h4>💳 Bank Transfer</h4>
           <p><strong>Account Number:</strong> 9769785476</p>
           <p><strong>Sort Code:</strong> 553536</p>
+          <p><strong>Account Name:</strong> city of refuge international ministries</p>
+
         </div>
 
         <div className="donation-method fade-in">
