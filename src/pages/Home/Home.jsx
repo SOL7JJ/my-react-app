@@ -6,6 +6,7 @@ import Image2 from '../../assets/PRAYER.jpg';
 import Image3 from '../../assets/BIBLE2.jpg';
 
 
+
 export default function Home() {
   return (
     <div className="home-container">
