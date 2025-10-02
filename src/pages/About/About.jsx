@@ -35,7 +35,7 @@ export default function About() {
           </p>
 
           <p className="about-paragraph">
-            We invite you to join us —; not just on Sundays, but to be part of a thriving, Spirit-led family that supports, encourages, and walks with you through every season of life.
+            We invite you to join us ; not just on Sundays, but to be part of a thriving, Spirit-led family that supports, encourages, and walks with you through every season of life.
           </p>
         </div>
         <div className="about-image-wrapper">

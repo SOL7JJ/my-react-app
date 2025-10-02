@@ -16,11 +16,14 @@ html {
 .home-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
+  background: #f8f9fa;
   color: rgb(0, 0, 0);
   text-align: center;
   padding: 40px 20px;
@@ -37,7 +40,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  pointer-events: none; /* <-- Added so clicks pass through */
+  pointer-events: none;
 }
 
 .hero-title {
@@ -63,110 +66,41 @@ html {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
-  display: inline-block; /* make <a> behave like a button */
+  display: inline-block;
 }
 
 .hero-button:hover {
   background-color: #e0e7ff;
-  color: #4338ca; /* Change text color to dark blue on hover */
   transform: translateY(-2px);
 }
 
-
-/* Church Image Section */
-.church-image-section {
+/* Sections with Images */
+.church-image-section,
+.image-section,
+.image2-section,
+.image3-section,
+.services,
+.watch-online {
   padding: 60px 20px;
   text-align: center;
-  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
+background-color: #f8f9fa;
 }
 
-.church-image {
-  width: 1000px;
-  height: 600px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.6s ease;
-}
-
-.church-image:hover {
-  transform: scale(1.02);
-}
-
-.church-caption {
-  font-size: 1rem;
-  margin-top: 15px;
-  color: #555;
-}
-
-/* Image Section */
-.image-section {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
-}
-
-.image {
-  width: 95%;
-  max-width: 900px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.6s ease;
-}
-
-.image:hover {
-  transform: scale(1.02);
-}
-
-.church-caption {
-  font-size: 1rem;
-  margin-top: 15px;
-  color: #555;
-}
-
-
-/* Image2 Section */
-.image2-section {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
-}
-
-.image2 {
-  width: 95%;
-  max-width: 900px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.6s ease;
-}
-
-.image2:hover {
-  transform: scale(1.02);
-}
-
-.church-caption {
-  font-size: 1rem;
-  margin-top: 15px;
-  color: #555;
-}
-
-
-
-/* Image3 Section */
-
-.image3-section {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
-}
-
+.church-image,
+.image,
+.image2,
 .image3 {
-  width: 95%;
+  width: 100%;
   max-width: 900px;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.6s ease;
 }
 
+.church-image:hover,
+.image:hover,
+.image2:hover,
 .image3:hover {
   transform: scale(1.02);
 }
@@ -176,13 +110,8 @@ html {
   margin-top: 15px;
   color: #555;
 }
-/* Services Section */
-.services {
-  padding: 60px 20px;
-  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
-  text-align: center;
-}
 
+/* Services Section */
 .section-title {
   font-size: 2.2rem;
   color: #1d4ed8;
@@ -197,12 +126,6 @@ html {
 }
 
 /* Watch Online Section */
-.watch-online {
-  background: linear-gradient(90deg, #ffffff 0%, #f9f7ff 70%, #f3efff 90%, #f0e9ff 100%);
-  padding: 60px 20px;
-  text-align: center;
-}
-
 .watch-description {
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -249,9 +172,20 @@ html {
 }
 
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    line-height: 1.2;
   }
 
   .hero-subtitle,
@@ -267,8 +201,41 @@ html {
     font-size: 0.95rem;
   }
 
-  .church-image {
+  .church-image,
+  .image,
+  .image2,
+  .image3 {
     width: 100%;
+    max-width: 100%;
     border-radius: 10px;
+  }
+
+  .home-container {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-button,
+  .watch-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .service-time,
+  .service-location {
+    font-size: 0.95rem;
   }
 }

@@ -20,7 +20,7 @@ export default function Home() {
 
      {/* Hero Section */}
 <section className="hero">
-  <h1 className="hero-title">Welcome to CORIM Ministries</h1>
+  <h1 className="hero-title">Welcome to City of refuge International Ministries</h1>
   <p className="hero-subtitle">A place to grow in faith, love, and community</p>
   <a
     href="https://www.facebook.com/profile.php?id=100077531105752"
@@ -36,7 +36,7 @@ export default function Home() {
 {/* Image Section */}
       <section className="image-section">
         <img src={Image} alt="Grace Fellowship Church" className="image" />
-        <h1 className="hero-title"> Bible studies </h1>
+        <h1 className="hero-title"> After Church </h1>
       </section>
 
 
