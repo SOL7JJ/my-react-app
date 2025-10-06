@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.jpg"; 
+import logo from "../../assets/logo.jpg";   // if Header is 2 levels deep
+
+
 
 
 
