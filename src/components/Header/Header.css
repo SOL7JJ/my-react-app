@@ -1,6 +1,6 @@
 /* Navbar */
 .navbar {
-  background: linear-gradient(90deg, #1877f2, #6d28d9); /* Facebook blue to purple */
+  background: linear-gradient(90deg, #1877f2, #6d28d9);
   width: 100%;
   padding: 15px 40px;
   color: #f8f7ff;
@@ -20,22 +20,21 @@
 }
 
 /* Logo Section */
-.logo-section {
+.logo-section {   /* updated to match JSX */
   display: flex;
   align-items: center;
   flex: 1;
 }
 
-.logo-image {
-  height: 60px;      /* adjust size */
-  width: 60px;       /* make width same as height for a perfect circle */
-  border-radius: 50%; /* this makes it round */
+.logo-image {    /* updated to match JSX */
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
   margin-right: 15px; 
   display: inline-block;
   vertical-align: middle;
-  object-fit: cover;  /* ensures the image fits nicely inside the circle */
+  object-fit: cover;
 }
-
 
 .logo-container {
   display: flex;
@@ -138,11 +137,14 @@
   }
 
   .logo-section {
+    width: 100%;
+    justify-content: flex-start;
     margin-bottom: 10px;
   }
 
   .logo-image {
     height: 40px;
+    width: 40px;
   }
 
   .logo {
