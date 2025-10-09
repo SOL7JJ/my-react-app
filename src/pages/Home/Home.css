@@ -17,9 +17,11 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding: 0 20px;
+  width: 100vw; /* 100% of the viewport width */
+  padding: 0;
+  margin: 0;
 }
+
 
 /* Hero Section */
 .hero {
@@ -91,7 +93,7 @@ background-color: #f8f9fa;
 .image2,
 .image3 {
   width: 100%;
-  max-width: 900px;
+  max-width: 100%;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -238,4 +240,17 @@ background-color: #f8f9fa;
   .service-location {
     font-size: 0.95rem;
   }
+}
+
+.home-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each section fills the width but keeps inner content centered */
+.section {
+  max-width: 1200px; /* keeps content at a nice readable width */
+  margin: 0 auto;
+  padding: 40px 20px; /* adds space inside */
 }
