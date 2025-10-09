@@ -9,7 +9,7 @@ body,
 html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f8f9fa;
+  background-color: white;
   color: #333;
 }
 
@@ -59,7 +59,7 @@ html {
 
 .hero-button {
   background-color: #4338ca;
-  color: #ffffff;
+  color: white;
   border: none;
   padding: 14px 30px;
   font-weight: bold;
@@ -72,7 +72,7 @@ html {
 }
 
 .hero-button:hover {
-  background-color: #e0e7ff;
+  background-color: white;
   transform: translateY(-2px);
 }
 
@@ -85,15 +85,15 @@ html {
 .watch-online {
   padding: 60px 20px;
   text-align: center;
-background-color: #f8f9fa;
+background-color: white;
 }
 
 .church-image,
 .image,
 .image2,
 .image3 {
-  width: 100%;
-  max-width: 100%;
+  width: 1200px;
+  max-width: 1200px;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
