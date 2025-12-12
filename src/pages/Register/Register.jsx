@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 export default function Register() {
@@ -10,13 +11,13 @@ export default function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your register logic here
     alert(`Registered: ${formData.username}, ${formData.email}`);
   };
 
   return (
     <div className="register-container">
       <h2>Register</h2>
+
       <form onSubmit={handleSubmit}>
         <input
           name="username"
@@ -42,9 +43,12 @@ export default function Register() {
           onChange={handleChange}
           required
         />
+
         <button type="submit">Register</button>
-        <p>Come to me those who are weary </p>
       </form>
+
+      {/* 🔥 New link to go back to Login */}
+      <p>Already have an account? <Link to="/login">Login</Link></p>
     </div>
   );
 }
