@@ -9,6 +9,8 @@ import Donation from './pages/Donation/Donation.jsx';
 import Testimonies from './pages/Testimonies/Testimonies.jsx';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import TestFirebase from './components/TestFirebase.jsx';
+
 
 function App() {
   const location = useLocation();
@@ -17,18 +19,20 @@ function App() {
     <div className="app-container">
       <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} /> 
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-         <Route path="/home" element={<Home />} />
-          <Route path="/donation" element={<Donation/>} />
-             <Route path="/Testimonies" element={<Testimonies/>} />
+     <Routes>
+  <Route path="/" element={<Home />} /> 
+  <Route path="/register" element={<Register />} />
+  <Route path="/login" element={<Login />} />
+  <Route path="/blog" element={<Blog />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/home" element={<Home />} />
+  <Route path="/donation" element={<Donation/>} />
+  <Route path="/Testimonies" element={<Testimonies/>} />
 
-      </Routes>
+  {/* Temporary Firebase test route */}
+  <Route path="/test-firebase" element={<TestFirebase />} />
+</Routes>
 
       
 
