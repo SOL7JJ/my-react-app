@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Login.css'; // Make sure this file exists
+import { Link } from 'react-router-dom'; // <-- Add this
+import './Login.css';
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -10,7 +11,6 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your login logic here
     alert(`Logged in with: ${formData.email}`);
   };
 
@@ -36,8 +36,10 @@ export default function Login() {
         />
         <button type="submit">Login</button>
       </form>
-      <p>Not a member yet? <a href="/register">Register</a></p>
+
+      <p>
+        Not a member yet? <Link to="/register">Register</Link>
+      </p>
     </div>
   );
 }
- 
