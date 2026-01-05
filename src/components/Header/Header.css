@@ -11,6 +11,7 @@
 }
 
 .navbar-container {
+  font-family: 'Montserrat';
   display: flex;
   align-items: center;
   justify-content: space-between;

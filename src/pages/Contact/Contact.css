@@ -10,6 +10,7 @@ body {
 
 /* Contact Container */
 .contact-container {
+  font-family: 'Montserrat';
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,7 +21,9 @@ body {
 }
 
 /* Heading */
+
 .contact-container h2 {
+  font-family: 'Montserrat';
   font-size: 2.5rem;
   margin-bottom: 30px;
   color: #4c1d95;

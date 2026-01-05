@@ -1,8 +1,9 @@
 .donation-container {
+  font-family: 'Montserrat';
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat';
   background: linear-gradient(135deg, #ffffff, #e2d4f5, #a78bfa);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -10,17 +11,20 @@
 }
 
 h2 {
+  font-family: 'Montserrat';
   text-align: center;
   color: #1d4ed8;
   margin-bottom: 30px;
 }
 
 .intro h3 {
+  font-family: 'Montserrat';
   color: #4338ca;
   margin-bottom: 15px;
 }
 
 .donation-method {
+  font-family: 'Montserrat';
   background: #f7f5fc;
   padding: 20px;
   border-radius: 10px;
