@@ -33,28 +33,26 @@ export default function Home() {
   </a>
 </section>
 
-
-{/* Image Section */}
-      <section className="image-section">
+ 
+{/* 
+Image Section 
+       <section className="image-section">
         <img src={Image} alt="Grace Fellowship Church" className="image" />
-        <h1 className="hero-title"> After Church </h1>
+        <h1 className="hero-title">FELLOWSHIP</h1>
       </section>
-
-
     
-    {/* Image2 Section */}
       <section className="image2-section">
         <img src={Image2} alt="Grace Fellowship Church" className="image2" />
-        <h1 className="hero-title">Prayer request</h1>
+        <h1 className="hero-title">PRAYER</h1>
       </section>
 
- {/* Image3 Section */}
+
       <section className="image3-section">
         <img src={Image3} alt="Grace Fellowship Church" className="image3" />
-        <h1 className="hero-title">Discover your purpose</h1>
+        <h1 className="hero-title">YOUTH</h1>
       </section>
 
-
+*/}
 
  
   {/* Service Times */}
